@@ -14,5 +14,5 @@ When('User goes to the website and enters {string} and {string}', async function
 });
 
 Then('The user is logged in successfully.', async function () {
-    console.log('Test successful.')
+    await landingPage.isUserLoggedIn();
 })
