@@ -9,12 +9,14 @@ let context: BrowserContext;
 
 BeforeAll(async function (){
     browser = await chromium.launch(config);
+    
 });
 
 Before(async function (){
     context = await browser.newContext();
     const page = await context.newPage();
     pageFixture.page = page;
+    pageFixture.page.setViewportSize({ width: 1050, height: 1500 }) //! Used secondary monitor, can be removed/adjusted to show on default monitor.
 });
 
 After(async function ({pickle, result}){
@@ -26,5 +28,5 @@ After(async function ({pickle, result}){
 });
 
 AfterAll(async function (){
-    //await browser.close();
+    await browser.close();
 });
