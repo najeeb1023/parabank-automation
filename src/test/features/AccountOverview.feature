@@ -11,5 +11,5 @@ Feature: User is able to view their account details.
     
     Scenario: User is able to see their account details. 
         When The user navigates to account overview tab.
-        Then Test
+        Then User is able to see their.
             
