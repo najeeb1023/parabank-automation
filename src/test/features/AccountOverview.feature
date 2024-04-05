@@ -9,7 +9,7 @@ Feature: User is able to view their account details.
         When User registers new user account.
         Then The user is logged in successfully.
     
-    Scenario Outline: User is able to see their account details. 
+    Scenario: User is able to see their account details. 
         When The user navigates to account overview tab.
         Then Test
             
