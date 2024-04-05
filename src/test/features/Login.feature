@@ -3,13 +3,9 @@ Feature: User is able to login
 
     User is able to login.
 
-    Background: Background name
+    Background: User is logged in.
         Given The user lands at the webpage.
 
     Scenario: 
-        When User goes to the website and enters "<USERNAME>" and "<PASSWORD>"
+        When User registers new user account.
         Then The user is logged in successfully.
-
-        Examples:
-            | USERNAME | PASSWORD |
-            | automationtest  | password123  |

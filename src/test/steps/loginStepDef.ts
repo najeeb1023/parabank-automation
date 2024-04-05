@@ -9,8 +9,8 @@ Given('The user lands at the webpage.', async function () {
     await pageFixture.page.goto("https://parabank.parasoft.com/parabank/register.htm");
 });
 
-When('User goes to the website and enters {string} and {string}', async function (username: string, password: string) {
-    await landingPage.loginUser(username, password);
+When('User registers new user account.', async function () {
+    await landingPage.registerUser();
 });
 
 Then('The user is logged in successfully.', async function () {
