@@ -8,7 +8,7 @@ export class AccountOverview {
     }
 
     accountOverviewLocators = {
-        accountTab:()=> pageFixture.page.locator("//div[contains(@id,'leftPanel')]")
+        accountTab:()=> pageFixture.page.locator("//div[contains(@id,'leftPanel')]//li[2]")
     }
 
     public async navigateToAccountOverview ():Promise<void> {
