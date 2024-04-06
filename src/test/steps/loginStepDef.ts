@@ -15,4 +15,4 @@ When('User registers new user account.', async function () {
 
 Then('The user is logged in successfully.', async function () {
     await landingPage.isUserLoggedIn();
-})
+});
