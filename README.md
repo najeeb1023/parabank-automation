@@ -1,0 +1,1 @@
+[![Playwright Tests](https://github.com/najeeb1023/parabank-automation/actions/workflows/playwright.yaml/badge.svg)](https://github.com/najeeb1023/parabank-automation/actions/workflows/playwright.yaml)
