@@ -63,6 +63,6 @@ export class LandingPage {
     public async isUserLoggedIn():Promise<void>{
         const assertLogin = await this.landingPageLocators.loginPara();
         expect(assertLogin).toContainText('Welcome');
-        process.stdout.write(await this.landingPageLocators.loginPara().textContent());
+        console.log(await this.landingPageLocators.loginPara().textContent());
     }
 }

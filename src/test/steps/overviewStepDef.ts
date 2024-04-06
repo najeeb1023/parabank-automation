@@ -9,5 +9,5 @@ When('The user navigates to account overview tab.', async function () {
 });
 
 Then('User is able to see their.', async function () {
-    console.log('Test');
+    console.log('Work in progress.');
 });
