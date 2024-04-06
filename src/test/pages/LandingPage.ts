@@ -5,7 +5,7 @@ export class LandingPage {
 
     constructor(public page: Page){
         pageFixture.page = page;
-    }
+    };
 
     firstName_array = ["Aaran", "Aaren", "Aarez", "Aarman", "Aaron", "Aaron-James", "Aarron", "Aaryan", "Aaryn", "Aayan", "Aazaan", "Abaan",
     "Abbas", "Abdallah", "Abdalroof", "Abdihakim", "Abdirahman", "Abdisalam", "Abdul", "Abdul-Aziz", "Abdulbasir", "Abdulkadir", "Abdulkarem",
@@ -14,7 +14,7 @@ export class LandingPage {
     "Adegbolahan", "Aden", "Adenn", "Adie", "Adil", "Aditya", "Adnan", "Adrian", "Adrien", "Aedan", "Aedin", "Aedyn", "Aeron", "Afonso", "Ahmad",
     "Ahmed", "Ahmed-Aziz", "Ahoua", "Austen", "Austin", "Avani", "Averon", "Avi", "Avinash", "Avraham", "Awais", "Awwal",
     "Axel", "Ayaan", "Ayan", "Aydan", "Ayden", "Aydin", "Aydon", "Ayman", "Ayomide", "Ayren", "Ayrton", "Aytug", "Ayub", "Ayyub", "Azaan", "Azedine", "Azeem",
-    "Azim", "Aziz", "Azlan", "Azzam", "Azzedine", "Babatunmise", "Babur", "Bader", "Badr", "Badsha", "Bailee", "Bailey", "Bailie", "Bailley", "Baillie", "Baley"]
+    "Azim", "Aziz", "Azlan", "Azzam", "Azzedine", "Babatunmise", "Babur", "Bader", "Badr", "Badsha", "Bailee", "Bailey", "Bailie", "Bailley", "Baillie", "Baley"];
 
     lastName_array = ["Anderson", "Ashwoon", "Aikin", "Bateman", "Bongard", "Bowers", "Boyd", "Cannon", "Cast", "Deitz", "Dewalt", "Ebner", "Frick", "Hancock",
     "Haworth", "Hesch", "Hoffman", "Kassing", "Knutson", "Lawless", "Lawicki", "Mccord", "McCormack", "Miller", "Myers", "Nugent", "Ortiz", "Orwig", "Ory", "Paiser",
@@ -25,9 +25,9 @@ export class LandingPage {
     "Duffman", "Eastman", "Ferro", "Ferry", "Fletcher", "Fietzer", "Hylan", "Hydinger", "Illingsworth", "Ingram", "Irwin", "Jagtap", "Jenson", "Johnson", "Johnsen", "Jones",
     "Jurgenson", "Kalleg", "Kaskel", "Keller", "Leisinger", "LePage", "Lewis", "Linde", "Lulloff", "Maki", "Martin", "McGinnis", "Mills", "Moody", "Moore", "Napier", "Nelson",
     "Norquist", "Nuttle", "Olson", "Ostrander", "Reamer", "Reardon", "Reyes", "Rice", "Ripka", "Roberts", "Rogers", "Root", "Sandstrom", "Sawyer", "Schlicht", "Schmitt",
-    "Schwager", "Schutz", "Schuster", "Tapia", "Thompson", "Tiernan", "Tisler" ]
+    "Schwager", "Schutz", "Schuster", "Tapia", "Thompson", "Tiernan", "Tisler" ];
 
-    cityName_array = ["Lodon", "New York", "Karachi", "Delhi", "Berlin", "Toronto"]
+    cityName_array = ["Lodon", "New York", "Karachi", "Delhi", "Berlin", "Toronto"];
 
     landingPageLocators = {
         fistName:()=> pageFixture.page.locator("//div//input[contains(@name,'customer.firstName')]"),
@@ -42,7 +42,7 @@ export class LandingPage {
         confirmPassField:()=> pageFixture.page.locator("//div//input[contains(@name,'repeatedPassword')]"),
         registerBtn:()=> pageFixture.page.locator("//form[contains(@id,'customerForm')]//input[contains(@type,'submit')]"),
         loginPara:()=> pageFixture.page.locator("//div//p[contains(@class,'smallText')]")
-    }
+    };
 
     public async registerUser():Promise<void> {
         await this.landingPageLocators.fistName().type(this.firstName_array[Math.floor(Math.random() * this.firstName_array.length)]);
@@ -58,11 +58,11 @@ export class LandingPage {
         await this.landingPageLocators.passwordField().type('password123');
         await this.landingPageLocators.confirmPassField().type('password123');
         await this.landingPageLocators.registerBtn().click();
-    }
+    };
 
     public async isUserLoggedIn():Promise<void>{
         const assertLogin = await this.landingPageLocators.loginPara();
         expect(assertLogin).toContainText('Welcome');
         console.log(await this.landingPageLocators.loginPara().textContent());
-    }
-}
+    };
+};

@@ -5,7 +5,7 @@ export class AccountOverview {
 
     constructor(public page: Page){
         pageFixture.page = page;
-    }
+    };
 
     accountOverviewLocators = {
         accountTab:()=> pageFixture.page.locator("//div[contains(@id,'leftPanel')]//li[2]"),
@@ -15,13 +15,12 @@ export class AccountOverview {
         accountBal:()=> pageFixture.page.locator("//div[contains(@id,'rightPanel')]//tbody//tr[1]//td[2]"),
         availAmount:()=> pageFixture.page.locator("//div[contains(@id,'rightPanel')]//tbody//tr[1]//td[3]"),
         totalBal:()=> pageFixture.page.locator("//div[contains(@id,'rightPanel')]//tbody//tr[2]")
-
-    }
+    };
 
     public async navigateToAccountOverview ():Promise<void> {
         await this.accountOverviewLocators.accountTab().click();
         await expect(this.accountOverviewLocators.accountHeading()).toBeVisible();
-    }
+    };
 
     public async getAccountNumber ():Promise<void> {
         const accountHeading = await this.accountOverviewLocators.accountColumn().textContent();
@@ -33,7 +32,5 @@ export class AccountOverview {
         process.stdout.write("\n" + "Account balance: " + `${accountBalance}`);
         process.stdout.write("\n" + "Available balance: " + `${availableAccBalance}`);
         process.stdout.write("\n" + `${totalAccBal}`);
-    }
-
-
-}
+    };
+};
