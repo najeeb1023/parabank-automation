@@ -1,4 +1,4 @@
-@Login
+@Login @Regression
 Feature: User is able to login
 
     User is able to login.
