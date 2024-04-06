@@ -11,5 +11,5 @@ Feature: User is able to view their account details.
     
     Scenario: User is able to see their account details. 
         When The user navigates to account overview tab.
-        Then User is able to see their.
+        Then User is able to see account number, balance, available amount and total balance.
             
