@@ -1,4 +1,4 @@
-@accountOverview
+@Regression @AccountOverview
 Feature: User is able to view their account details.
 
     User logs in their account. And navigates to account overview
