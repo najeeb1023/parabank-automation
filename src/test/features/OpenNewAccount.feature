@@ -11,4 +11,10 @@ Feature: User is able to view their account details.
     
     Scenario: User is able to create a new checking account.  
         When The user navigates to open new account tab.
-        Then User is able to create new checking account.
+        And User is able to create new "<Account Type>".
+        And User selects the account number.
+        Then User account is opened.
+        
+        Examples:
+            | Account Type |
+            | SAVINGS      |

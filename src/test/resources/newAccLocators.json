@@ -1,0 +1,29 @@
+{
+    "name": "New Account Page Locators",
+    "webElements": [
+        {
+            "elementName": "newAccTab",
+            "selectorValue": "//div[contains(@id,'leftPanel')]//li[1]"
+        },
+        {
+            "elementName": "newAccHeading",
+            "selectorValue": "//div[contains(@id,'rightPanel')]//h1"
+        },
+        {
+            "elementName": "accountTypeDropDown",
+            "selectorValue": "//form[contains(@class,'ng-pristine ng-valid')]//select[contains(@ng-model,'types.selectedOption')]"
+        },
+        {
+            "elementName": "accountNumberDropDown",
+            "selectorValue": "//div[contains(@id,'rightPanel')]//select[contains(@id,'fromAccountId')]"
+        },
+        {
+            "elementName": "accountConfirmation",
+            "selectorValue": "//div[contains(@ng-app,'AddAccountApp')]"
+        },
+        {
+            "elementName": "openNewAccBtn",
+            "selectorValue": "//input[contains(@type,'submit')]"
+        }
+    ]
+}
