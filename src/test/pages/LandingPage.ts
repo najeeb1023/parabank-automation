@@ -45,18 +45,18 @@ export class LandingPage {
     };
 
     public async registerUser():Promise<void> {
-        await this.landingPageLocators.fistName().type(this.firstName_array[Math.floor(Math.random() * this.firstName_array.length)]);
-        await this.landingPageLocators.lastName().type(this.lastName_array[Math.floor(Math.random() * this.lastName_array.length)]);
-        await this.landingPageLocators.addressField().type('11th Street, Uptown');
-        await this.landingPageLocators.cityField().type(this.cityName_array[Math.floor(Math.random() * this.cityName_array.length)]);
-        await this.landingPageLocators.stateField().type('Arizona');
-        await this.landingPageLocators.zipcodeField().type('749837');
-        await this.landingPageLocators.ssnField().type('934875');
+        await this.landingPageLocators.fistName().fill(this.firstName_array[Math.floor(Math.random() * this.firstName_array.length)]);
+        await this.landingPageLocators.lastName().fill(this.lastName_array[Math.floor(Math.random() * this.lastName_array.length)]);
+        await this.landingPageLocators.addressField().fill('11th Street, Uptown');
+        await this.landingPageLocators.cityField().fill(this.cityName_array[Math.floor(Math.random() * this.cityName_array.length)]);
+        await this.landingPageLocators.stateField().fill('Arizona');
+        await this.landingPageLocators.zipcodeField().fill('749837');
+        await this.landingPageLocators.ssnField().fill('934875');
         const userNameStored = this.firstName_array[Math.floor(Math.random() * this.firstName_array.length)]+
                                this.lastName_array[Math.floor(Math.random() * this.lastName_array.length)];
-        await this.landingPageLocators.userNameField().type(userNameStored)
-        await this.landingPageLocators.passwordField().type('password123');
-        await this.landingPageLocators.confirmPassField().type('password123');
+        await this.landingPageLocators.userNameField().fill(userNameStored)
+        await this.landingPageLocators.passwordField().fill('password123');
+        await this.landingPageLocators.confirmPassField().fill('password123');
         await this.landingPageLocators.registerBtn().click();
     };
 
