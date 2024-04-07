@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "parabank": "cucumber-js test --format cucumber-console-formatter --tags @Regression"
+    "parabank": "cucumber-js test --format cucumber-console-formatter --tags @OpenAcc"
   },
   "keywords": [],
   "author": "",
