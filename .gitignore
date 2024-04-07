@@ -4,5 +4,3 @@ node_modules/
 /videos
 test-results\screenshots\
 cucumber-report.html
-package.json
-playwright.config
