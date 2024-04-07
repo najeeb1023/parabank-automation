@@ -18,3 +18,4 @@ Feature: User is able to view their account details.
         Examples:
             | Account Type |
             | SAVINGS      |
+            | CHECKING     |

@@ -20,7 +20,6 @@ export class NewAccount {
         accountNumberDropDown:()=> pageFixture.page.locator(getResource('accountNumberDropDown').selectorValue),
         accountConfirmation:()=> pageFixture.page.locator(getResource('accountConfirmation').selectorValue),
         openNewAccBtn:()=> pageFixture.page.locator(getResource('openNewAccBtn').selectorValue)
-        
     };
 
     public async navigateToOpenNewAcc():Promise<void> {
@@ -46,6 +45,5 @@ export class NewAccount {
         await confirmAcc.textContent();
         await expect(confirmAcc).toContainText(await this.newAccLocators.accountConfirmation().textContent());
         process.stdout.write(`${await confirmAcc.textContent()}`);
-        
     };
 };
