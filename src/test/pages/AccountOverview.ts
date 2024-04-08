@@ -1,6 +1,11 @@
 import { Page, expect } from "@playwright/test";
 import { pageFixture } from "../hooks/pageFixture";
+import { PageElement } from "../resources/interfaces/iPageElement";
+import * as accOverviewLocators from "../resources/accOverviewLocators.json";
 
+    function getResource(resourceName: string){
+        return accOverviewLocators.webElements.find((element: PageElement) => element.elementName == resourceName) as PageElement
+    };
 export class AccountOverview {
 
     constructor(public page: Page){
@@ -8,13 +13,13 @@ export class AccountOverview {
     };
 
     accountOverviewLocators = {
-        accountTab:()=> pageFixture.page.locator("//div[contains(@id,'leftPanel')]//li[2]"),
-        accountHeading:()=> pageFixture.page.locator("//div[contains(@id,'rightPanel')]//h1"),
-        accountColumn:()=> pageFixture.page.locator("//div[contains(@id,'rightPanel')]//table//th[1]"),
-        accountNumber:()=> pageFixture.page.locator("//div[contains(@id,'rightPanel')]//tbody//tr//a[1]"),
-        accountBal:()=> pageFixture.page.locator("//div[contains(@id,'rightPanel')]//tbody//tr[1]//td[2]"),
-        availAmount:()=> pageFixture.page.locator("//div[contains(@id,'rightPanel')]//tbody//tr[1]//td[3]"),
-        totalBal:()=> pageFixture.page.locator("//div[contains(@id,'rightPanel')]//tbody//tr[2]")
+        accountTab:()=> pageFixture.page.locator(getResource('accountTab').selectorValue),
+        accountHeading:()=> pageFixture.page.locator(getResource('accountHeading').selectorValue),
+        accountColumn:()=> pageFixture.page.locator(getResource('accountColumn').selectorValue),
+        accountNumber:()=> pageFixture.page.locator(getResource('accountNumber').selectorValue),
+        accountBal:()=> pageFixture.page.locator(getResource('accountBal').selectorValue),
+        availAmount:()=> pageFixture.page.locator(getResource('availAmount').selectorValue),
+        totalBal:()=> pageFixture.page.locator(getResource('totalBal').selectorValue)
     };
 
     public async navigateToAccountOverview ():Promise<void> {

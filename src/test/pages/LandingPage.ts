@@ -1,6 +1,11 @@
 import { Page, expect } from "@playwright/test";
 import { pageFixture } from "../hooks/pageFixture";
+import { PageElement } from "../resources/interfaces/iPageElement";
+import * as loginLocators from "../resources/loginLocators.json";
 
+    function getResource(resourceName: string){
+        return loginLocators.webElements.find((element: PageElement) => element.elementName == resourceName) as PageElement
+    }
 export class LandingPage {
 
     constructor(public page: Page){
@@ -30,18 +35,18 @@ export class LandingPage {
     cityName_array = ["Lodon", "New York", "Karachi", "Delhi", "Berlin", "Toronto"];
 
     landingPageLocators = {
-        fistName:()=> pageFixture.page.locator("//div//input[contains(@name,'customer.firstName')]"),
-        lastName:()=> pageFixture.page.locator("//div//input[contains(@name,'customer.lastName')]"),
-        addressField:()=> pageFixture.page.locator("//div//input[contains(@name,'customer.address.street')]"),
-        cityField:()=> pageFixture.page.locator("//div//input[contains(@name,'customer.address.city')]"),
-        stateField:()=> pageFixture.page.locator("//div//input[contains(@name,'customer.address.state')]"),
-        zipcodeField:()=> pageFixture.page.locator("//div//input[contains(@name,'customer.address.zipCode')]"),
-        ssnField:()=> pageFixture.page.locator("//div//input[contains(@name,'customer.ssn')]"),
-        userNameField:()=> pageFixture.page.locator("//div//input[contains(@name,'customer.username')]"),
-        passwordField:()=> pageFixture.page.locator("//div//input[contains(@name,'customer.password')]"),
-        confirmPassField:()=> pageFixture.page.locator("//div//input[contains(@name,'repeatedPassword')]"),
-        registerBtn:()=> pageFixture.page.locator("//form[contains(@id,'customerForm')]//input[contains(@type,'submit')]"),
-        loginPara:()=> pageFixture.page.locator("//div//p[contains(@class,'smallText')]")
+        fistName:()=> pageFixture.page.locator(getResource('firstName').selectorValue),
+        lastName:()=> pageFixture.page.locator(getResource('lastName').selectorValue),
+        addressField:()=> pageFixture.page.locator(getResource('addressField').selectorValue),
+        cityField:()=> pageFixture.page.locator(getResource('cityField').selectorValue),
+        stateField:()=> pageFixture.page.locator(getResource('stateField').selectorValue),
+        zipcodeField:()=> pageFixture.page.locator(getResource('zipcodeField').selectorValue),
+        ssnField:()=> pageFixture.page.locator(getResource('ssnField').selectorValue),
+        userNameField:()=> pageFixture.page.locator(getResource('userNameField').selectorValue),
+        passwordField:()=> pageFixture.page.locator(getResource('passwordField').selectorValue),
+        confirmPassField:()=> pageFixture.page.locator(getResource('confirmPassField').selectorValue),
+        registerBtn:()=> pageFixture.page.locator(getResource('registerBtn').selectorValue),
+        loginPara:()=> pageFixture.page.locator(getResource('loginPara').selectorValue)
     };
 
     public async registerUser():Promise<void> {
