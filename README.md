@@ -4,7 +4,7 @@ __________________________________
 __________________________________
 ## How to run this project:
 1. Clone this project.
-2. Run ```` npm i````.
+2. Run ````npm i````.
 3. Use npm run parabank to rull all feature files with @Regression.
    * To run a specific scenario go to package.json ---> edit the tag with your desired scenario.
 4. To run in headed/headless mode edit tsconfig.json file with parameter headed:true/false.

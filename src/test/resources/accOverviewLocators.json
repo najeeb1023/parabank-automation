@@ -1,0 +1,33 @@
+{
+    "name": "Account Overview Locators",
+    "webElements": [
+        {
+            "elementName": "accountTab",
+            "selectorValue": "//div[contains(@id,'leftPanel')]//li[2]"
+        },
+        {
+            "elementName": "accountHeading",
+            "selectorValue": "//div[contains(@id,'rightPanel')]//h1"
+        },
+        {
+            "elementName": "accountColumn",
+            "selectorValue": "//div[contains(@id,'rightPanel')]//table//th[1]"
+        },
+        {
+            "elementName": "accountNumber",
+            "selectorValue": "//div[contains(@id,'rightPanel')]//tbody//tr//a[1]"
+        },
+        {
+            "elementName": "accountBal",
+            "selectorValue": "//div[contains(@id,'rightPanel')]//tbody//tr[1]//td[2]"
+        },
+        {
+            "elementName": "availAmount",
+            "selectorValue": "//div[contains(@id,'rightPanel')]//tbody//tr[1]//td[3]"
+        },
+        {
+            "elementName": "totalBal",
+            "selectorValue": "//div[contains(@id,'rightPanel')]//tbody//tr[2]"
+        }
+    ]
+}

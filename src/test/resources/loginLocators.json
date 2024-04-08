@@ -1,0 +1,53 @@
+{
+    "name": "Login Page Locators",
+    "webElements": [
+        {
+            "elementName": "firstName",
+            "selectorValue": "//div//input[contains(@name,'customer.firstName')]"
+        },
+        {
+            "elementName": "lastName",
+            "selectorValue": "//div//input[contains(@name,'customer.lastName')]"
+        },
+        {
+            "elementName": "addressField",
+            "selectorValue": "//div//input[contains(@name,'customer.address.street')]"
+        },
+        {
+            "elementName": "cityField",
+            "selectorValue": "//div//input[contains(@name,'customer.address.city')]"
+        },
+        {
+            "elementName": "stateField",
+            "selectorValue": "//div//input[contains(@name,'customer.address.state')]"
+        },
+        {
+            "elementName": "zipcodeField",
+            "selectorValue": "//div//input[contains(@name,'customer.address.zipCode')]"
+        },
+        {
+            "elementName": "ssnField",
+            "selectorValue": "//div//input[contains(@name,'customer.ssn')]"
+        },
+        {
+            "elementName": "userNameField",
+            "selectorValue": "//div//input[contains(@name,'customer.username')]"
+        },
+        {
+            "elementName": "passwordField",
+            "selectorValue": "//div//input[contains(@name,'customer.password')]"
+        },
+        {
+            "elementName": "confirmPassField",
+            "selectorValue": "//div//input[contains(@name,'repeatedPassword')]"
+        },
+        {
+            "elementName": "registerBtn",
+            "selectorValue": "//form[contains(@id,'customerForm')]//input[contains(@type,'submit')]"
+        },
+        {
+            "elementName": "loginPara",
+            "selectorValue": "//div//p[contains(@class,'smallText')]"
+        }
+    ]
+}
