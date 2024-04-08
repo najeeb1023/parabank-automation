@@ -45,7 +45,7 @@ export class LandingPage {
     };
 
     public async registerUser():Promise<void> {
-        await this.landingPageLocators.fistName().fill(this.firstName_array[Math.floor(Math.random() * this.firstName_array.length)]);
+        await this.landingPageLocators.fistName().fill(this.firstName_array[Math.floor(Math.random() * this.lastName_array.length)]);
         await this.landingPageLocators.lastName().fill(this.lastName_array[Math.floor(Math.random() * this.lastName_array.length)]);
         await this.landingPageLocators.addressField().fill('11th Street, Uptown');
         await this.landingPageLocators.cityField().fill(this.cityName_array[Math.floor(Math.random() * this.cityName_array.length)]);

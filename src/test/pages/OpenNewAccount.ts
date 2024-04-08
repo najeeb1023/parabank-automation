@@ -44,6 +44,6 @@ export class NewAccount {
         const confirmAcc = this.newAccLocators.accountConfirmation();
         await confirmAcc.textContent();
         await expect(confirmAcc).toContainText(await this.newAccLocators.accountConfirmation().textContent());
-        process.stdout.write(`${await confirmAcc.textContent()}`);
+        console.log(await confirmAcc.textContent());
     };
 };
