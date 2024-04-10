@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "parabank": "cucumber-js test --format cucumber-console-formatter --config=config/cucumber.js --tags @Regression"
+    "parabank": "cucumber-js --config=config/cucumber.js --tags @Regression --format @cucumber/pretty-formatter --tags @Regression"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@cucumber/cucumber": "^9.6.0",
+    "@cucumber/pretty-formatter": "^1.0.1",
     "@playwright/test": "^1.39.0",
     "@semantic-release/git": "^10.0.1",
     "@semantic-release/github": "^10.0.3",

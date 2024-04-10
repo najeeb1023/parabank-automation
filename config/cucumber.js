@@ -1,3 +1,5 @@
+const { DEFAULT_THEME } = require("@cucumber/pretty-formatter");
+
 module.exports = {
 
     default: {
@@ -6,7 +8,11 @@ module.exports = {
             resolveJsonModule: true
         },
         formatOptions: {
-            snippetInterface: "async-await"
+            snippetInterface: "async-await",
+            theme: {
+                DEFAULT_THEME,
+                'step text': 'red',
+            }
         },
         paths: [
             "src/test/features/"
@@ -21,8 +27,11 @@ module.exports = {
             "ts-node/register"
         ],
         format: [
-            "html:test-result/reports/cucumber-report.html"
-        ]
+            "cucumber-console-formatter",
+            "html:test-result/reports/cucumber-report.html",
+            "json:test-result/reports/cucumber-report.json",
+            "@cucumber/pretty-formatter"
+            
+        ],
     }
-
 }
