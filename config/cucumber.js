@@ -30,7 +30,7 @@ module.exports = {
             "cucumber-console-formatter",
             "html:test-result/reports/cucumber-report.html",
             "json:test-result/reports/cucumber-report.json",
-            "@cucumber/pretty-formatter"
+            // "@cucumber/pretty-formatter"
             
         ],
     }
