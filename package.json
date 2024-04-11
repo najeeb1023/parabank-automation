@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "parabank": "cucumber-js --config=config/cucumber.js --tags @Regression"
+    "parabank": "cucumber-js --config=config/cucumber.js --tags @PayBill"
   },
   "keywords": [],
   "author": "",

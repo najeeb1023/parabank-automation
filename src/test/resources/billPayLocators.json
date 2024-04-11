@@ -1,0 +1,49 @@
+{
+    "name": "Bill Pay Locators",
+    "webElements": [
+        {
+            "elementName": "billPayTab",
+            "selectorValue": "//div[contains(@id,'leftPanel')]//li[4]"
+        },
+        {
+            "elementName": "payeeName",
+            "selectorValue": "//table[contains(@class, 'form2')]//input[contains(@name, 'payee.name')]"
+        },
+        {
+            "elementName": "payeeAddress",
+            "selectorValue": "//table[contains(@class, 'form2')]//input[contains(@name, 'payee.address.street')]"
+        },
+        {
+            "elementName": "payeeCity",
+            "selectorValue": "//table[contains(@class, 'form2')]//input[contains(@name, 'payee.address.city')]"
+        },
+        {
+            "elementName": "payeeState",
+            "selectorValue": "//table[contains(@class, 'form2')]//input[contains(@name, 'payee.address.state')]"
+        },
+        {
+            "elementName": "payeeZip",
+            "selectorValue": "//table[contains(@class, 'form2')]//input[contains(@name, 'payee.address.zip')]"
+        },
+        {
+            "elementName": "payeeNum",
+            "selectorValue": "//table[contains(@class, 'form2')]//input[contains(@name, 'payee.phoneNumber')]"
+        },
+        {
+            "elementName": "payeeAcc",
+            "selectorValue": "//table[contains(@class, 'form2')]//input[contains(@name, 'payee.accountNumber')]"
+        },
+        {
+            "elementName": "payeeConfirmAcc",
+            "selectorValue": "//table[contains(@class, 'form2')]//input[contains(@name, 'verifyAccount')]"
+        },
+        {
+            "elementName": "amountToPay",
+            "selectorValue": "//table[contains(@class, 'form2')]//input[contains(@name, 'amount')]"
+        },
+        {
+            "elementName": "fromAccountDropDown",
+            "selectorValue": "//table[contains(@class, 'form2')]//selectt[contains(@name, 'fromAccountId')]"
+        }
+    ]
+}
