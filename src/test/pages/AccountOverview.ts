@@ -33,9 +33,9 @@ export class AccountOverview {
         const accountBalance = await this.accountOverviewLocators.accountBal().textContent();
         const availableAccBalance = await this.accountOverviewLocators.availAmount().textContent();
         const totalAccBal = await this.accountOverviewLocators.totalBal().textContent();
-        process.stdout.write(accountHeading + " number: " + `${accountNumber}`);
-        process.stdout.write("\n" + "Account balance: " + `${accountBalance}`);
-        process.stdout.write("\n" + "Available balance: " + `${availableAccBalance}`);
-        process.stdout.write("\n" + `${totalAccBal}`);
+        console.log("\n" + ("    ") + accountHeading + " number: " + accountNumber.trim());
+        console.log(("    ") + "Account balance: " + accountBalance.trim());
+        console.log(("    ") + "Available balance: " + availableAccBalance.trim());
+        console.log(("    ") + totalAccBal.trim());
     };
 };
