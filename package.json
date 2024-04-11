@@ -1,10 +1,10 @@
 {
   "name": "orangehrm-playwright-cucumber",
-  "version": "1.0.0",
+  "version": "v2.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "parabank": "cucumber-js --config=config/cucumber.js --tags @Login"
+    "parabank": "cucumber-js --config=config/cucumber.js --tags @Regression"
   },
   "keywords": [],
   "author": "",

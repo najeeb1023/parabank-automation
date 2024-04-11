@@ -1,4 +1,5 @@
 const { DEFAULT_THEME } = require("@cucumber/pretty-formatter");
+const { ThemeItem } = require("@cucumber/pretty-formatter/lib/src/theme");
 
 module.exports = {
 
@@ -10,9 +11,9 @@ module.exports = {
         formatOptions: {
             snippetInterface: "async-await",
             colorsEnabled: true,
-            // theme: {
-            //     DEFAULT_THEME,
+            // makeTheme: {
             //     'step text': 'red',
+            //     'feature name': 'pink'
             // },
             
         },
