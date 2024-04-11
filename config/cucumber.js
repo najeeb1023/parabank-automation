@@ -9,10 +9,12 @@ module.exports = {
         },
         formatOptions: {
             snippetInterface: "async-await",
-            theme: {
-                DEFAULT_THEME,
-                'step text': 'red',
-            }
+            colorsEnabled: true,
+            // theme: {
+            //     DEFAULT_THEME,
+            //     'step text': 'red',
+            // },
+            
         },
         paths: [
             "src/test/features/"
@@ -21,16 +23,17 @@ module.exports = {
         dryRun: false,
         require: [
             "src/test/steps/*.ts",
-            "src/test/hooks/hooks.ts"
+            "src/test/hooks/hooks.ts",
+            "support-color"
         ],
         requireModule: [
             "ts-node/register"
         ],
         format: [
-            "cucumber-console-formatter",
             "html:test-result/reports/cucumber-report.html",
             "json:test-result/reports/cucumber-report.json",
-            // "@cucumber/pretty-formatter"
+            "@cucumber/pretty-formatter",
+            // "cucumber-console-formatter",
             
         ],
     }
