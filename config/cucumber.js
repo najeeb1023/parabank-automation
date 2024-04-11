@@ -1,25 +1,31 @@
 const { DEFAULT_THEME } = require("@cucumber/pretty-formatter");
-const { ThemeItem } = require("@cucumber/pretty-formatter/lib/src/theme");
 
 module.exports = {
 
     default: {
+        formatOptions: {
+            snippetInterface: "async-await",
+            colorsEnabled: true,
+            theme: {
+              ...DEFAULT_THEME,
+              'step status': ['red'],
+              'step text': ['white'],
+              'feature description': ['white', 'italic'],
+              'feature keyword': ['cyan', 'bold'],
+              'feature name': ['white', 'underline'],
+              'tag': ['green'],
+              'scenario keyword': ['green'],
+              'scenario name': ['white'],
+              'step keyword': ['green'],
+              'step status': ['bold', 'red'],
+            }
+          },
         compilerOptions: {
             esModuleInterop: true,
             resolveJsonModule: true
         },
-        formatOptions: {
-            snippetInterface: "async-await",
-            colorsEnabled: true,
-            // makeTheme: {
-            //     'step text': 'red',
-            //     'feature name': 'pink'
-            // },
-            
-        },
         paths: [
             "src/test/features/"
-            
         ],
         dryRun: false,
         require: [
@@ -34,8 +40,6 @@ module.exports = {
             "html:test-result/reports/cucumber-report.html",
             "json:test-result/reports/cucumber-report.json",
             "@cucumber/pretty-formatter",
-            // "cucumber-console-formatter",
-            
         ],
     }
 }
