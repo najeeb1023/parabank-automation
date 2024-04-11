@@ -20,6 +20,7 @@ __________________________________
 [![v2.0.0](https://github.com/najeeb1023/parabank-automation/actions/workflows/release.yaml/badge.svg)](https://github.com/najeeb1023/parabank-automation/actions)
 ## v2.0.0 includes:
 * Fixed output after each scenario step by using @cucumber/pretty-formatter.
+* Added output colorization for better readability.
 
 <br>
 
