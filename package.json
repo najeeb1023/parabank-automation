@@ -19,7 +19,6 @@
     "ts-node": "^10.9.1"
   },
   "dependencies": {
-    "cucumber-console-formatter": "^1.0.0",
     "supports-color": "^8.1.1"
   }
 }
