@@ -23,5 +23,5 @@ jobs:
       if: always()
       with:
         name: cucumber-report
-        path: cucumber-report.html
+        path: test-result/reports/cucumber-report.html, test-result/reports/cucumber-report.json
         retention-days: 30

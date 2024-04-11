@@ -13,4 +13,7 @@ Feature: User is able to transfer funds to an account.
         When The user navigates to bill pay tab.
         And Enters "<Payee Name>", "<Address>", "<City>", "<State>", "<Zip Code>", "<Phone Number>", "<Account Number>", "<Verify Account>", "<Amount>"
         And Selects account number, pressing the send payment.
-         
+
+        Examples:
+        | Payee Name  | Address           | City     | State    | Zip Code | Phone Number | Account Number | Verify Account | Amount |
+        | John Shilok | Jackman Street 11 | New York | New York | 798623   | 87234876     | 9827346987234  | 9827346987234  | 4750   |

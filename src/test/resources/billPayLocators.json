@@ -43,7 +43,15 @@
         },
         {
             "elementName": "fromAccountDropDown",
-            "selectorValue": "//table[contains(@class, 'form2')]//selectt[contains(@name, 'fromAccountId')]"
+            "selectorValue": "//table[contains(@class, 'form2')]//select[contains(@name, 'fromAccountId')]"
+        },
+        {
+            "elementName": "sendPaymentBtn",
+            "selectorValue": "//table[contains(@class, 'form2')]//input[contains(@type,'submit')]"
+        },
+        {
+            "elementName": "billPaymentConfirmation",
+            "selectorValue": "//div[contains(@id, 'rightPanel')]//div[contains(@ng-show, 'showResult')]//p[1]"
         }
     ]
 }

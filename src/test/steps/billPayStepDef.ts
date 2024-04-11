@@ -13,5 +13,5 @@ When("Enters {string}, {string}, {string}, {string}, {string}, {string}, {string
 });
 
 When("Selects account number, pressing the send payment.", async function () {
-    
+    await billPay.assertSentPayment();
 });

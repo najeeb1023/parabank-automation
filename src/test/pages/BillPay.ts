@@ -1,4 +1,4 @@
-import { Page } from "@playwright/test";
+import { Page, expect } from "@playwright/test";
 import { pageFixture } from "../hooks/pageFixture";
 import { PageElement } from "../resources/interfaces/iPageElement";
 import * as billPayLocators from "../resources/billPayLocators.json";
@@ -24,7 +24,9 @@ export class BillPay {
         payeeAcc:() => pageFixture.page.locator(getResource('payeeAcc').selectorValue),
         payeeConfirmAcc:() => pageFixture.page.locator(getResource('payeeConfirmAcc').selectorValue),
         amountToPay:() => pageFixture.page.locator(getResource('amountToPay').selectorValue),
-        fromAccountDropDown:() => pageFixture.page.locator(getResource('fromAccountDropDown').selectorValue)
+        fromAccountDropDown:() => pageFixture.page.locator(getResource('fromAccountDropDown').selectorValue),
+        sendPaymentBtn:() => pageFixture.page.locator(getResource('sendPaymentBtn').selectorValue),
+        billPaymentConfirmation:() => pageFixture.page.locator(getResource('billPaymentConfirmation').selectorValue)
     }
 
     public async navigateToBillPay ():Promise<void> {
@@ -41,6 +43,15 @@ export class BillPay {
         await this.billPaylocators.payeeAcc().fill(payeAcc);
         await this.billPaylocators.payeeConfirmAcc().fill(payeeConfirmAcc);
         await this.billPaylocators.amountToPay().fill(amountToPay);
-        // await this.billPaylocators.fromAccountDropDown().selectOption([]);
+        let accountNum = [(await this.billPaylocators.fromAccountDropDown().textContent()).trim()];
+        await this.billPaylocators.fromAccountDropDown().selectOption(accountNum);
+        await this.billPaylocators.sendPaymentBtn().click();
     };
+
+    public async assertSentPayment ():Promise<void> {
+        let confirmPayment = await this.billPaylocators.billPaymentConfirmation().textContent();
+        expect(confirmPayment).toContain('was successful');
+        process.stdout.write("\n" + ("    ") +confirmPayment.trim() + "\n" + "\n");
+    }
+
 };
