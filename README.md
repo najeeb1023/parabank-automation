@@ -17,9 +17,9 @@ __________________________________
 __________________________________
 <br>
 
-[![v1.2.0](https://github.com/najeeb1023/parabank-automation/actions/workflows/release.yaml/badge.svg)](https://github.com/najeeb1023/parabank-automation/actions)
-## v1.2.0 includes:
-* Added json parsion in each class to get locators seperately using PageElement. PageElement interface added to parse xpath of locators.
+[![v2.0.0](https://github.com/najeeb1023/parabank-automation/actions/workflows/release.yaml/badge.svg)](https://github.com/najeeb1023/parabank-automation/actions)
+## v2.0.0 includes:
+* Fixed output after each scenario step by using @cucumber/pretty-formatter.
 
 <br>
 
