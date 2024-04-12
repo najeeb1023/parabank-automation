@@ -36,6 +36,6 @@ export class AccountOverview {
         console.log("\n" + ("    ") + accountHeading + " number: " + accountNumber.trim());
         console.log(("    ") + "Account balance: " + accountBalance.trim());
         console.log(("    ") + "Available balance: " + availableAccBalance.trim());
-        console.log(("    ") + totalAccBal.trim());
+        console.log(("    ") + "Your total account balance is: " + totalAccBal.trim());
     };
 };

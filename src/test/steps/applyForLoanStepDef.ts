@@ -10,5 +10,4 @@ When('User navigates to the request loan tab.', async function () {
 
 Then('User is able to apply for a loan.', async function () {
     await applyLoan.loanApproved();
-    console.log("\n");
 });
