@@ -59,7 +59,9 @@ export class LandingPage {
         await this.landingPageLocators.ssnField().fill('934875');
         const userNameStored = this.firstName_array[Math.floor(Math.random() * this.firstName_array.length)]+
                                this.lastName_array[Math.floor(Math.random() * this.lastName_array.length)];
-        await this.landingPageLocators.userNameField().fill(userNameStored)
+        await this.landingPageLocators.userNameField().fill(userNameStored);       
+        const getUsernameContent = [userNameStored]
+        console.log(("\n") + ("    ") + ("Username entered: ") + getUsernameContent + ("\n"))
         await this.landingPageLocators.passwordField().fill('password123');
         await this.landingPageLocators.confirmPassField().fill('password123');
         await this.landingPageLocators.registerBtn().click();

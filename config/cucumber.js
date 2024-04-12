@@ -41,5 +41,6 @@ module.exports = {
             "json:test-result/reports/cucumber-report.json",
             "@cucumber/pretty-formatter",
         ],
+        retry: 1
     }
 }
