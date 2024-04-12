@@ -27,7 +27,7 @@
         },
         {
             "elementName": "totalBal",
-            "selectorValue": "//div[contains(@id,'rightPanel')]//tbody//tr[2]"
+            "selectorValue": "//div[contains(@id,'rightPanel')]//tbody//tr[2]//td[2]"
         }
     ]
 }
