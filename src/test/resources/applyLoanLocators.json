@@ -1,0 +1,29 @@
+{
+    "name": "Apply for Loan",
+    "webElements": [
+        {
+            "elementName": "requestLoanTab",
+            "selectorValue": "//div[contains(@id,'leftPanel')]//li[7]"
+        },
+        {
+            "elementName": "loanAmount",
+            "selectorValue": "//table[contains(@class, 'form2')]//input[contains(@id, 'amount')]"
+        },
+        {
+            "elementName": "downPayment",
+            "selectorValue": "//table[contains(@class, 'form2')]//input[contains(@id, 'downPayment')]"
+        },
+        {
+            "elementName": "fromAccountBtn",
+            "selectorValue": "//table[contains(@class, 'form2')]//select[contains(@id, 'fromAccountId')]"
+        },
+        {
+            "elementName": "applyNowBtn",
+            "selectorValue": "//table[contains(@class,'form')]//input[contains(@type,'submit')]"
+        },
+        {
+            "elementName": "loanRequest",
+            "selectorValue": "//table[contains(@class,'form')]//td[contains(@class,'ng-scope')]"
+        }
+    ]
+}
